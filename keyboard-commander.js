@@ -33,4 +33,4 @@ var KeyboardCommander = (function () {
   }
 }())
 
-Gamifer.registerGameObject(KeyboardCommander)
+Gamifier.registerGameObject(KeyboardCommander)
