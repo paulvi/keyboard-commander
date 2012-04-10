@@ -15,10 +15,8 @@ body {
   width: 100%;
 }
 .screen {
-  padding: 2em;
-}
-.start-screen {
   margin: 0 auto 0;
+  padding: 2em;
   width: 35em;
   text-align: center;
 }
