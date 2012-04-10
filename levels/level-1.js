@@ -1,8 +1,9 @@
 var Level1 = (function () {
   var levelId = 'level-1'
-    , saveInput = null
     , levelForm = null
     , formSubmitted = false
+
+    , saveInput = null
 
   function update () {
     var status = {status : 'continue'}
@@ -17,15 +18,17 @@ var Level1 = (function () {
   }
 
   function startUp () {
-    saveInput = document.getElementById('shortcut-save')
-    levelForm = document.getElementById('level-1-form')
+    levelForm = document.getElementById(levelId + '-form')
     levelForm.addEventListener('submit', onFormSubmit, false)
+
+    saveInput = document.getElementById('shortcut-save')
   }
 
   function cleanUp () {
-    saveInput = null
     levelForm.removeEventListener('submit', onFormSubmit)
     levelForm = null
+
+    saveInput = null
   }
 
   function onFormSubmit (ev) {
