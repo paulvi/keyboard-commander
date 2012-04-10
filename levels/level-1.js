@@ -7,7 +7,10 @@ var Level1 = (function () {
   function update () {
     var status = {status : 'continue'}
 
-    if (saveInput.value.toLowerCase() == 's' && formSubmitted)
+    if (
+      formSubmitted
+      && saveInput.value.toLowerCase() == 's'
+    )
       status.status = 'success'
 
     return status
