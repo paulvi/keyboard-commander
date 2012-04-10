@@ -1,11 +1,8 @@
 var KeyboardCommander = (function () {
   function startScreen () {
-    var startScreen = document.getElementById('start-screen')
-
-    gameScreen.appendChild(startScreen)
     document.getElementsByClassName('game-start')[0].addEventListener('click', function gameStartClick (ev) {
       this.removeEventListener('click', gameStartClick)
-      screens.appendChild(startScreen)
+      console.log('here')
       Gamifier.start()
     }, false)
   }
@@ -15,7 +12,9 @@ var KeyboardCommander = (function () {
   }
 
   function update () {
+    var status = {status : 'continue'}
 
+    return status
   }
 
   function success () {
@@ -27,7 +26,7 @@ var KeyboardCommander = (function () {
   }
 
   function levelSuccess () {
-
+    console.log('success')
   }
 
   function levelFailure () {
