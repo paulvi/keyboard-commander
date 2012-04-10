@@ -1,4 +1,12 @@
 var KeyboardCommander = (function () {
+  var gameScreen = document.getElementById('game-screen')
+
+  function startScreen () {
+    var startScreen = document.getElementsByClassName('start-screen')[0]
+
+    gameScreen.appendChild(startScreen)
+  }
+
   function start () {
 
   }
@@ -24,7 +32,8 @@ var KeyboardCommander = (function () {
   }
 
   return {
-    start : start
+    startScreen : startScreen
+    , start : start
     , update : update
     , success : success
     , failure : failure
@@ -34,3 +43,7 @@ var KeyboardCommander = (function () {
 }())
 
 Gamifier.registerGameObject(KeyboardCommander)
+
+window.addEventListener('load', function () {
+  KeyboardCommander.startScreen()
+});

@@ -1,0 +1,55 @@
+.start-screen
+  margin 0 auto 0
+  width 35em
+
+  text-align center
+
+.game-title
+  margin 0
+
+  font-size 4em
+  font-weight 100
+  line-height 1em
+
+.game-intro
+  margin 1.5em
+
+  font-size 1.5em
+  font-weight 200
+
+.game-icon
+  display block
+  margin 2.6em auto 3.4em
+  width 400px
+
+.game-start
+  padding 0.4em 0.8em 0.6em
+  position relative
+
+  animation pulse 2s infinite
+  background-color #19adb8
+  border 0
+  border-radius 0.175em
+  cursor pointer
+
+  color #fff
+  font 400 3em/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+.game-start:hover
+.game-start:focus
+  animation none
+  background-color #1ecfdc
+
+.game-start:active
+  top 1px
+
+  animation none
+  box-shadow inset 0 1px 4px rgba(0,0,0,0.2)
+
+@keyframes pulse
+  0%
+    box-shadow none
+  50%
+    box-shadow 0 0 20px rgba(#19adb8,1)
+  100%
+    box-shadow none
