@@ -13,10 +13,21 @@ var Level2 = (function () {
       formSubmitted
       && newInput.value.toLowerCase() == 'n'
       && openInput.value.toLowerCase() == 'o'
-    )
+    ) {
       status.status = 'success'
+      return status
+    }
 
-    return status
+    if (
+      formSubmitted
+      && (
+        newInput.value.toLowerCase() != 'n'
+        || openInput.value.toLowerCase() != 'o'
+      )
+    ) {
+      formSubmitted = false
+      status.status = 'failure'
+    }
   }
 
   function startUp () {

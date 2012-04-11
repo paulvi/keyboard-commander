@@ -15,10 +15,23 @@ var Level4 = (function () {
       && winInput.value.toLowerCase() == 'w'
       && tabInput.value.toLowerCase() == 't'
       && findInput.value.toLowerCase() == 'f'
-    )
+    ) {
       status.status = 'success'
+      return status
+    }
 
-    return status
+    if (
+      formSubmitted
+      && (
+        winInput.value.toLowerCase() != 'w'
+        || tabInput.value.toLowerCase() != 't'
+        || findInput.value.toLowerCase() != 'f'
+      )
+    ) {
+      formSubmitted = false
+      status.status = 'failure'
+      return status
+    }
   }
 
   function startUp () {

@@ -2,7 +2,7 @@ var KeyboardCommander = (function () {
   var activeScreen = document.getElementById('active-screen')
     , inactiveScreens = document.getElementById('inactive-screens')
     , levelSuccessScreen = document.getElementById('level-success')
-    , levelFailScreen = document.getElementById('level-fail')
+    , levelFailureScreen = document.getElementById('level-failure')
     , screenTimeout = null
     , mouseMoved = false
 
@@ -44,7 +44,14 @@ var KeyboardCommander = (function () {
     }, 700)
   }
 
-  function levelFailure () { }
+  function levelFailure () {
+    activeScreen.appendChild(levelFailureScreen)
+
+    screenTimeout = setTimeout(function () {
+      clearTimeout(screenTimeout)
+      inactiveScreens.appendChild(levelFailureScreen)
+    }, 700)
+  }
 
   function mouseMoveHandler () {
     mouseMoved = true

@@ -11,10 +11,19 @@ var Level10 = (function () {
     if (
       linkClicked
       && ruleInput.checked
-    )
+    ) {
       status.status = 'success'
+      return status
+    }
 
-    return status
+    if (
+      linkClicked
+      && !ruleInput.checked
+    ) {
+      linkeClicked = false
+      status.status = 'failure'
+      return status
+    }
   }
 
   function startUp () {

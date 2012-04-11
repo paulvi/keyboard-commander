@@ -25,10 +25,28 @@ var Level7 = (function () {
       && nextLetterInput.value.toLowerCase() == 'right'
       && prevMetaInput.value.toLowerCase() == 'ctrl'
       && prevLetterInput.value.toLowerCase() == 'left'
-    )
+    ) {
       status.status = 'success'
+      return status
+    }
 
-    return status
+    if (
+      formSubmitted
+      && (
+        selectMetaInput.value.toLowerCase() != 'ctrl'
+        || selectLetterInput.value.toLowerCase() != 'a'
+        || startMetaInput.value.toLowerCase() != 'home'
+        || endMetaInput.value.toLowerCase() != 'end'
+        || nextMetaInput.value.toLowerCase() != 'ctrl'
+        || nextLetterInput.value.toLowerCase() != 'right'
+        || prevMetaInput.value.toLowerCase() != 'ctrl'
+        || prevLetterInput.value.toLowerCase() != 'left'
+      )
+    ) {
+      formSubmitted = false
+      status.status = 'failure'
+      return status
+    }
   }
 
   function startUp () {

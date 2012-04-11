@@ -11,10 +11,21 @@ var Level1 = (function () {
     if (
       formSubmitted
       && saveInput.value.toLowerCase() == 's'
-    )
+    ) {
       status.status = 'success'
+      return status
+    }
 
-    return status
+    if (
+      formSubmitted
+      && (
+        saveInput.value.toLowerCase() != 's'
+      )
+    ) {
+      formSubmitted = false
+      status.status = 'failure'
+      return status
+    }
   }
 
   function startUp () {

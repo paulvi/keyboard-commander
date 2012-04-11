@@ -25,10 +25,24 @@ var Level3 = (function () {
       && cutInput.value.toLowerCase() == 'x'
       && pasteInput.value.toLowerCase() == 'v'
       && undoInput.value.toLowerCase() == 'z'
-    )
+    ) {
       status.status = 'success'
+      return status
+    }
 
-    return status
+    if (
+      formSubmitted
+      && (
+        copyInput.value.toLowerCase() != 'c'
+        || cutInput.value.toLowerCase() != 'x'
+        || pasteInput.value.toLowerCase() != 'v'
+        || undoInput.value.toLowerCase() != 'z'
+      )
+    ) {
+      formSubmitted = false
+      status.status = 'failure'
+      return status
+    }
   }
 
   function startUp () {

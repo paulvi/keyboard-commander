@@ -12,10 +12,23 @@ var Level5 = (function () {
     if (
       formSubmitted
       && fInput.checked
-    )
+    ) {
       status.status = 'success'
+      return status
+    }
 
-    return status
+    if (
+      formSubmitted
+      && (
+        !fInput.checked
+        || !tInput.checked
+        || tInput.checked
+      )
+    ) {
+      formSubmitted = false
+      status.status = 'failure'
+      return status
+    }
   }
 
   function startUp () {
