@@ -157,6 +157,17 @@ form button[data-state="visible"] {
 form div + button {
   margin-top: 1em;
 }
+.finish-box {
+  margin-top: 3em;
+}
+.finish-link,
+.finish-link:link,
+.finish-link:visited {
+  border-bottom: 0.1em solid #33f;
+  color: #33f;
+  font-size: 3em;
+  text-decoration: none;
+}
 .game-icon {
   display: block;
   margin: 3.5em auto 3.4em;
