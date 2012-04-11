@@ -52,6 +52,8 @@ var Level7 = (function () {
   }
 
   function startUp () {
+    formSubmitted = false
+
     levelForm = document.getElementById(levelId + '-form')
     levelForm.addEventListener('submit', onFormSubmit, false)
 

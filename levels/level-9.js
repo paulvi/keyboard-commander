@@ -18,6 +18,9 @@ var Level9 = (function () {
   }
 
   function startUp () {
+    hashAdded = false
+    backTriggered = false
+
     window.addEventListener('hashchange', onHashChange, false)
     part1 = document.getElementById('level-9-1')
     part2 = document.getElementById('level-9-2')

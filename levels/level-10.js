@@ -29,6 +29,8 @@ var Level10 = (function () {
   }
 
   function startUp () {
+    linkClicked = false
+
     linkFinish = document.getElementById('finish')
     linkFinish.addEventListener('click', onLinkClick, false)
     ruleInput = document.getElementById('rule')

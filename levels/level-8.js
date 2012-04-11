@@ -16,6 +16,9 @@ var Level8 = (function () {
   }
 
   function startUp () {
+    windowBlurred = false
+    windowFocused = false
+
     window.addEventListener('blur', onWindowBlur, false)
     window.addEventListener('focus', onWindowFocus, false)
   }
