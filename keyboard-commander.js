@@ -41,7 +41,7 @@ var KeyboardCommander = (function () {
   }
 
   function levelFailure () {
-
+    console.log('failure')
   }
 
   return {
