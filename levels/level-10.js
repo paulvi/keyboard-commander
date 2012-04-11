@@ -24,6 +24,8 @@ var Level10 = (function () {
       status.status = 'failure'
       return status
     }
+
+    return status
   }
 
   function startUp () {
