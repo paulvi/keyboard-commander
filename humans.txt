@@ -1,2 +1,3 @@
 /* THANKS */
   "Keyboard" icon by Andrew Forrester, from The Noun Project; <http://thenounproject.com/noun/computer-keyboard/#icon-No1807>
+  "Mouse" icon by Camila Bertoco, from The Noun Project; <http://thenounproject.com/noun/mouse/#icon-No890>
