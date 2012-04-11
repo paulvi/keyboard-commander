@@ -4,6 +4,7 @@ var KeyboardCommander = (function () {
     , levelSuccessScreen = document.getElementById('level-success')
     , levelFailScreen = document.getElementById('level-fail')
     , screenTimeout = null
+    , mouseMoved = false
 
   function startScreen () {
     document.getElementsByClassName('game-start')[0].addEventListener('click', function gameStartClick (ev) {
@@ -13,11 +14,14 @@ var KeyboardCommander = (function () {
   }
 
   function start () {
-
+    window.addEventListener('mousemove', mouseMoveHandler, false)
   }
 
   function update () {
     var status = {status : 'continue'}
+
+    if (mouseMoved)
+      status.status = 'failure'
 
     return status
   }
@@ -27,7 +31,7 @@ var KeyboardCommander = (function () {
   }
 
   function failure () {
-
+    activeScreen.appendChild(document.getElementById('failure'))
   }
 
   function levelSuccess () {
@@ -41,6 +45,10 @@ var KeyboardCommander = (function () {
   }
 
   function levelFailure () { }
+
+  function mouseMoveHandler () {
+    mouseMoved = true
+  }
 
   return {
     startScreen : startScreen
