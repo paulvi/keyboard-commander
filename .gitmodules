@@ -1,0 +1,3 @@
+[submodule "gamifier"]
+	path = gamifier
+	url = git@github.com:thomasjbradley/gamifier.git
