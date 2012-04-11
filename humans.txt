@@ -1,3 +1,18 @@
+/* TEAM */
+  Designer & Developer: Thomas J Bradley <hey@thomasjbradley.ca>
+  Site: http://thomasjbradley.ca
+  Twitter: @thomasjbradley
+  GitHub: https://github.com/thomasjbradley
+  Location: Ottawa, Canada
+
 /* THANKS */
   "Keyboard" icon by Andrew Forrester, from The Noun Project; <http://thenounproject.com/noun/computer-keyboard/#icon-No1807>
   "Mouse" icon by Camila Bertoco, from The Noun Project; <http://thenounproject.com/noun/mouse/#icon-No890>
+
+/* SITE */
+  Software:
+  - MacVim
+  - Git
+  - Stylus
+  - UglifyJS
+  - HTMLCompressor
