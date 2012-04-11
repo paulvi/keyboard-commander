@@ -8,7 +8,7 @@ var KeyboardCommander = (function () {
 
   function startScreen () {
     document.getElementsByClassName('game-start')[0].addEventListener('click', function gameStartClick (ev) {
-      this.removeEventListener('click', gameStartClick)
+      this.removeEventListener('click', gameStartClick, false)
       Gamifier.start()
     }, false)
   }
