@@ -25,6 +25,14 @@ h1
   font-weight 100
   line-height 1em
 
+a
+a:link
+a:visited
+  border-bottom 0.1em solid #33f
+
+  color #33f
+  text-decoration none
+
 mark
   background-color #ffc
 
@@ -71,11 +79,20 @@ mark
   font-weight bold
   line-height 1
 
+.marker-symbol
+  display inline-block
+  margin-top -0.2em
+
+  font-size 2em
+
 .marker[data-state="success"]
   background-color #6dd110
 
 .marker[data-state="failure"]
   background-color rgba(#f33, 0.5)
+
+.marker[data-state="stripes"]
+  background-color #1ecfdc
 
 form div
 fieldset
@@ -172,13 +189,7 @@ form div + button
   margin-top 3em
 
 .finish-link
-.finish-link:link
-.finish-link:visited
-  border-bottom 0.1em solid #33f
-
-  color #33f
   font-size 3em
-  text-decoration none
 
 .game-icon
   display block
