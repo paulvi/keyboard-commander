@@ -79,6 +79,10 @@ label
   margin 0 0.3em 0 0
 
   font-size 2em
+  vertical-align middle
+
+input + label
+  margin-right 1em
 
 .func
   font-weight 100
@@ -89,6 +93,12 @@ input
   border 1px solid #ccc
 
   font normal 2em/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif
+
+input[type="checkbox"]
+input[type="radio"]
+  width auto
+
+  vertical-align middle
 
 button
   margin 3em 0
@@ -123,5 +133,11 @@ form button[data-state="visible"]
 
 form div + button
   margin-top 1em
+
+fieldset
+  padding 0
+  margin 0
+
+  border 0
 
 @import 'screens/start.styl'
