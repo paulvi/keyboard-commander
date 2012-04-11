@@ -2,8 +2,8 @@
   <h1>Shortcuts for…</h1>
   <form id="level-7-form">
 
-    <fieldset class="fieldset-alt">
-      <legend>Select all:</legend>
+    <div class="fieldset-group">
+      <h2>Select all:</h2>
       <label for="shortcut-select-meta" data-state="invisible">Meta key</label>
       <select id="shortcut-select-meta">
         <option value="-"></option>
@@ -13,10 +13,10 @@
       </select>
       <label for="shortcut-select-letter" data-state="invisible">Letter</label>
       <input id="shortcut-select-letter" maxlength="1" required>
-    </fieldset>
+    </div>
 
-    <fieldset class="fieldset-alt">
-      <legend>Start of line:</legend>
+    <div class="fieldset-group">
+      <h2>Start of line:</h2>
       <label for="shortcut-start-meta" data-state="invisible">Key</label>
       <select id="shortcut-start-meta">
         <option value="-"></option>
@@ -25,10 +25,10 @@
         <option value="home">Home</option>
         <option value="up">&uarr;</option>
       </select>
-    </fieldset>
+    </div>
 
-    <fieldset class="fieldset-alt">
-      <legend>End of line:</legend>
+    <div class="fieldset-group">
+      <h2>End of line:</h2>
       <label for="shortcut-end-meta" data-state="invisible">Key</label>
       <select id="shortcut-end-meta">
         <option value="-"></option>
@@ -37,10 +37,10 @@
         <option value="pgdn">PgDn</option>
         <option value="right">&rarr;</option>
       </select>
-    </fieldset>
+    </div>
 
-    <fieldset class="fieldset-alt">
-      <legend>Next word:</legend>
+    <div class="fieldset-group">
+      <h2>Next word:</h2>
       <label for="shortcut-next-meta" data-state="invisible">Meta key</label>
       <select id="shortcut-next-meta">
         <option value="-"></option>
@@ -56,10 +56,10 @@
         <option value="right">&rarr;</option>
         <option value="pgup">PgUp</option>
       </select>
-    </fieldset>
+    </div>
 
-    <fieldset class="fieldset-alt">
-      <legend>Previous word:</legend>
+    <div class="fieldset-group">
+      <h2>Previous word:</h2>
       <label for="shortcut-prev-meta" data-state="invisible">Meta key</label>
       <select id="shortcut-prev-meta">
         <option value="-"></option>
@@ -75,8 +75,8 @@
         <option value="down">&darr;</option>
         <option value="end">End</option>
       </select>
-    </fieldset>
+    </div>
 
-    <button class="level-btn">Next</button>
+    <button class="level-btn" data-state="visible">Next</button>
   </form>
 </div>
