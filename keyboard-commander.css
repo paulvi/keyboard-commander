@@ -77,6 +77,14 @@ label {
 input + label {
   margin-right: 1em;
 }
+label[data-state="invisible"] {
+  position: absolute;
+  top: -999em;
+}
+select {
+  font-size: 2em;
+  vertical-align: middle;
+}
 .func {
   font-weight: 100;
 }
