@@ -1,6 +1,7 @@
 html{height:100%;margin:0;padding:0;width:100%;background-color:#e2e2e2;color:#333;font:normal 100%/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif}
-body{height:100%;margin:0;padding:0;position:relative;width:100%}
+body{height:100%;margin:0;overflow:hidden;padding:0;position:relative;width:100%}
 h1{margin:0 0 1em;font-size:4em;font-weight:100;line-height:1em}
+[hidden]{display:none}
 a,a:link,a:visited{border-bottom:.1em solid #33f;color:#33f;text-decoration:none}
 mark{background-color:#ffc}
 .screen,.level{margin:0 auto 0;padding:2em;width:35em;text-align:center}
