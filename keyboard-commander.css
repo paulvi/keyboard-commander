@@ -20,16 +20,46 @@ body {
   width: 35em;
   text-align: center;
 }
+.screen-cover {
+  height: 100%;
+  left: 0;
+  padding: 2em 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: rgba(226,226,226,0.70);
+}
+.intro {
+  margin: 1.5em;
+  font-size: 2em;
+  font-weight: 200;
+}
+.marker {
+  display: inline-block;
+  height: 2em;
+  margin: 0.2em 0 0;
+  padding: 0.45em 0 0;
+  width: 2em;
+  background-color: #333;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 8em;
+  font-weight: bold;
+  line-height: 1;
+}
+.marker[data-state="success"] {
+  background-color: #6dd110;
+}
 .game-title {
   margin: 0;
   font-size: 4em;
   font-weight: 100;
   line-height: 1em;
-}
-.game-intro {
-  margin: 1.5em;
-  font-size: 1.5em;
-  font-weight: 200;
 }
 .game-icon {
   display: block;

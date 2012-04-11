@@ -8,7 +8,6 @@ var KeyboardCommander = (function () {
   function startScreen () {
     document.getElementsByClassName('game-start')[0].addEventListener('click', function gameStartClick (ev) {
       this.removeEventListener('click', gameStartClick)
-      console.log('here')
       Gamifier.start()
     }, false)
   }
@@ -24,7 +23,7 @@ var KeyboardCommander = (function () {
   }
 
   function success () {
-
+    console.log('winner!')
   }
 
   function failure () {
@@ -41,10 +40,7 @@ var KeyboardCommander = (function () {
     }, 1500)
   }
 
-  function levelFailure () {
-    activeScreen.appendChild(levelFailScreen)
-    Gamifier.pause()
-  }
+  function levelFailure () { }
 
   return {
     startScreen : startScreen
