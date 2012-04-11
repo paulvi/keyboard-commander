@@ -14,6 +14,8 @@ var KeyboardCommander = (function () {
   }
 
   function start () {
+    window.addEventListener('blur', windowBlurHandler, false)
+    window.addEventListener('focus', windowFocusHandler, false)
     window.addEventListener('mousemove', mouseMoveHandler, false)
   }
 
@@ -55,6 +57,17 @@ var KeyboardCommander = (function () {
 
   function mouseMoveHandler () {
     mouseMoved = true
+  }
+
+  function windowBlurHandler () {
+    window.removeEventListener('mousemove', mouseMoveHandler)
+  }
+
+  function windowFocusHandler () {
+    var timer = setTimeout(function () {
+      window.addEventListener('mousemove', mouseMoveHandler, false)
+      clearTimeout(timer)
+    }, 100)
   }
 
   return {
