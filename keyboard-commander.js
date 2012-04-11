@@ -2,7 +2,11 @@ var KeyboardCommander = (function () {
   var activeScreen = document.getElementById('active-screen')
     , inactiveScreens = document.getElementById('inactive-screens')
     , levelSuccessScreen = document.getElementById('level-success')
+    , successMessages = levelSuccessScreen.getElementsByClassName('message')
+    , totalSuccessMessages = successMessages.length
     , levelFailureScreen = document.getElementById('level-failure')
+    , failureMessages = levelFailureScreen.getElementsByClassName('message')
+    , totalFailureMessages = failureMessages.length
     , screenTimeout = null
     , mouseMoved = false
 
@@ -37,6 +41,16 @@ var KeyboardCommander = (function () {
   }
 
   function levelSuccess () {
+    var randMessage = Math.round(Math.random() * (totalSuccessMessages - 1))
+
+    for (var i = 0; i < totalSuccessMessages; i++) {
+      if (i == randMessage) {
+        successMessages[i].removeAttribute('hidden')
+      } else {
+        successMessages[i].setAttribute('hidden', true)
+      }
+    }
+
     activeScreen.appendChild(levelSuccessScreen)
 
     screenTimeout = setTimeout(function () {
@@ -47,6 +61,16 @@ var KeyboardCommander = (function () {
   }
 
   function levelFailure () {
+    var randMessage = Math.round(Math.random() * (totalFailureMessages - 1))
+
+    for (var i = 0; i < totalFailureMessages; i++) {
+      if (i == randMessage) {
+        failureMessages[i].removeAttribute('hidden')
+      } else {
+        failureMessages[i].setAttribute('hidden', true)
+      }
+    }
+
     activeScreen.appendChild(levelFailureScreen)
 
     screenTimeout = setTimeout(function () {
