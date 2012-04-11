@@ -27,6 +27,7 @@ var Level2 = (function () {
     ) {
       formSubmitted = false
       status.status = 'failure'
+      return status
     }
   }
 
