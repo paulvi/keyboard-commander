@@ -72,13 +72,23 @@ h1
   background-color #6dd110
 
 form div
+fieldset
   margin 0 0 2em
+  padding 0
+
+  border 0
+
+.fieldset-alt
+  padding-left 15em
+  position relative
+
+  text-align left
 
 label
   display inline-block
   margin 0 0.3em 0 0
 
-  font-size 2em
+  font 200 18px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif
   vertical-align middle
 
 input + label
@@ -88,8 +98,17 @@ label[data-state="invisible"]
   position absolute
   top -999em
 
+legend
+  left 0
+  position absolute
+  top 0.1em
+  width 12em
+
+  font 200 18px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif
+  text-align right
+
 select
-  font-size 2em
+  font-size 16px
   vertical-align middle
 
 .func
@@ -100,7 +119,8 @@ input
 
   border 1px solid #ccc
 
-  font normal 2em/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif
+  font normal 16px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif
+  vertical-align middle
 
 input[type="checkbox"]
 input[type="radio"]
@@ -119,7 +139,7 @@ button
   cursor pointer
 
   color #fff
-  font 400 1.5em/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font 400 18px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
 
 button:hover
 button:focus
@@ -141,11 +161,5 @@ form button[data-state="visible"]
 
 form div + button
   margin-top 1em
-
-fieldset
-  padding 0
-  margin 0
-
-  border 0
 
 @import 'screens/start.styl'
