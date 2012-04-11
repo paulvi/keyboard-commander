@@ -43,6 +43,8 @@ var KeyboardCommander = (function () {
   function levelSuccess () {
     var randMessage = Math.round(Math.random() * (totalSuccessMessages - 1))
 
+    Gamifier.pause()
+
     for (var i = 0; i < totalSuccessMessages; i++) {
       if (i == randMessage) {
         successMessages[i].removeAttribute('hidden')
@@ -63,6 +65,8 @@ var KeyboardCommander = (function () {
   function levelFailure () {
     var randMessage = Math.round(Math.random() * (totalFailureMessages - 1))
 
+    Gamifier.pause()
+
     for (var i = 0; i < totalFailureMessages; i++) {
       if (i == randMessage) {
         failureMessages[i].removeAttribute('hidden')
@@ -76,6 +80,7 @@ var KeyboardCommander = (function () {
     screenTimeout = setTimeout(function () {
       clearTimeout(screenTimeout)
       inactiveScreens.appendChild(levelFailureScreen)
+      Gamifier.resume()
     }, 700)
   }
 
