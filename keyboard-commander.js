@@ -23,7 +23,7 @@ var KeyboardCommander = (function () {
   }
 
   function success () {
-    console.log('winner!')
+    activeScreen.appendChild(document.getElementById('success'))
   }
 
   function failure () {
@@ -37,7 +37,7 @@ var KeyboardCommander = (function () {
       clearTimeout(screenTimeout)
       inactiveScreens.appendChild(levelSuccessScreen)
       Gamifier.nextLevel()
-    }, 1500)
+    }, 700)
   }
 
   function levelFailure () { }
