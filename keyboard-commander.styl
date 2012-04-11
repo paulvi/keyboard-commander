@@ -71,11 +71,17 @@ h1
 .marker[data-state="success"]
   background-color #6dd110
 
+form div
+  margin 0 0 2em
+
 label
   display inline-block
   margin 0 0.3em 0 0
 
   font-size 2em
+
+.func
+  font-weight 100
 
 input
   width 2em
@@ -107,5 +113,15 @@ button:active
 
   animation none
   box-shadow inset 0 1px 4px rgba(0,0,0,0.2)
+
+form button
+  top -999em
+  position absolute
+
+form button[data-state="visible"]
+  position static
+
+form div + button
+  margin-top 1em
 
 @import 'screens/start.styl'
