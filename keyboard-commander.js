@@ -2,7 +2,8 @@ var KeyboardCommander = (function () {
   var activeScreen = document.getElementById('active-screen')
     , inactiveScreens = document.getElementById('inactive-screens')
     , levelSuccessScreen = document.getElementById('level-success')
-    , successTimeout = null
+    , levelFailScreen = document.getElementById('level-fail')
+    , screenTimeout = null
 
   function startScreen () {
     document.getElementsByClassName('game-start')[0].addEventListener('click', function gameStartClick (ev) {
@@ -33,15 +34,16 @@ var KeyboardCommander = (function () {
   function levelSuccess () {
     activeScreen.appendChild(levelSuccessScreen)
 
-    successTimeout = setTimeout(function () {
-      clearTimeout(successTimeout)
+    screenTimeout = setTimeout(function () {
+      clearTimeout(screenTimeout)
       inactiveScreens.appendChild(levelSuccessScreen)
       Gamifier.nextLevel()
     }, 1500)
   }
 
   function levelFailure () {
-    console.log('failure')
+    activeScreen.appendChild(levelFailScreen)
+    Gamifier.pause()
   }
 
   return {
