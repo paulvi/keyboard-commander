@@ -15,12 +15,6 @@ var Level5 = (function () {
     )
       status.status = 'success'
 
-    if (
-      formSubmitted
-      && tInput.checked
-    )
-      status.status = 'failure'
-
     return status
   }
 

@@ -14,12 +14,6 @@ var Level6 = (function () {
     )
       status.status = 'success'
 
-    if (
-      formSubmitted
-      && highlightInput.value.toLowerCase() != 'shift'
-    )
-      status.status = 'failure'
-
     return status
   }
 
