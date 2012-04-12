@@ -22,7 +22,6 @@ htmlcompressor --type html --remove-quotes --simple-bool-attr -o ./build/ ./buil
 
 cp -R images build/images
 cp humans.txt build/humans.txt
-
 cp manifest.appcache build/manifest.appcache
 
 for img in images/*.*
