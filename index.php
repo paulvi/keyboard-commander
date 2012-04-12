@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-ca">
+<html lang="en-ca"<?php if (php_sapi_name() == 'cli') : ?> manifest="manifest.appcache"<?php endif; ?>>
 <head>
   <meta charset="utf-8">
   <title>Keyboard Commander · A small, fun, browser game to test your keyboard knowledge</title>
