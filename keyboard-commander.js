@@ -22,6 +22,8 @@ var KeyboardCommander = (function () {
     window.addEventListener('blur', windowBlurHandler, false)
     window.addEventListener('focus', windowFocusHandler, false)
     window.addEventListener('mousemove', mouseMoveHandler, false)
+
+    document.getElementById('start-over-link').href = location.href
   }
 
   function update () {
