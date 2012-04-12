@@ -7,8 +7,7 @@
 </head>
 <body>
 
-  <div id="active-screen">
-  </div>
+  <div id="active-screen"></div>
 
   <div id="inactive-screens" hidden>
   <?php

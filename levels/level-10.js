@@ -20,7 +20,7 @@ var Level10 = (function () {
       linkClicked
       && !ruleInput.checked
     ) {
-      linkeClicked = false
+      linkClicked = false
       status.status = 'failure'
       return status
     }
