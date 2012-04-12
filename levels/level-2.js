@@ -38,6 +38,7 @@ var Level2 = (function () {
 
     levelForm = document.getElementById(levelId + '-form')
     levelForm.addEventListener('submit', onFormSubmit, false)
+    levelForm.reset()
 
     newInput = document.getElementById('shortcut-new')
     openInput = document.getElementById('shortcut-open')

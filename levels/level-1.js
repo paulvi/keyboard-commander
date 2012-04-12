@@ -35,6 +35,7 @@ var Level1 = (function () {
 
     levelForm = document.getElementById(levelId + '-form')
     levelForm.addEventListener('submit', onFormSubmit, false)
+    levelForm.reset()
 
     saveInput = document.getElementById('shortcut-save')
   }

@@ -52,6 +52,7 @@ var Level3 = (function () {
 
     levelForm = document.getElementById(levelId + '-form')
     levelForm.addEventListener('submit', onFormSubmit, false)
+    levelForm.reset()
 
     copyInput = document.getElementById('shortcut-copy')
     cutInput = document.getElementById('shortcut-cut')

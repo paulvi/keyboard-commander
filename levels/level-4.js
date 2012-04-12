@@ -41,6 +41,7 @@ var Level4 = (function () {
 
     levelForm = document.getElementById(levelId + '-form')
     levelForm.addEventListener('submit', onFormSubmit, false)
+    levelForm.reset()
 
     winInput = document.getElementById('shortcut-win')
     tabInput = document.getElementById('shortcut-tab')

@@ -33,6 +33,7 @@ var Level6 = (function () {
 
     levelForm = document.getElementById(levelId + '-form')
     levelForm.addEventListener('submit', onFormSubmit, false)
+    levelForm.reset()
 
     highlightInput = document.getElementById('shortcut-highlight')
   }

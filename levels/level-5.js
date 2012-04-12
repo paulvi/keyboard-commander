@@ -38,6 +38,7 @@ var Level5 = (function () {
 
     levelForm = document.getElementById(levelId + '-form')
     levelForm.addEventListener('submit', onFormSubmit, false)
+    levelForm.reset()
 
     tInput = document.getElementById('shortcut-refresh-t')
     fInput = document.getElementById('shortcut-refresh-f')

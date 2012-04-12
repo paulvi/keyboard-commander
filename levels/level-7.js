@@ -56,6 +56,7 @@ var Level7 = (function () {
 
     levelForm = document.getElementById(levelId + '-form')
     levelForm.addEventListener('submit', onFormSubmit, false)
+    levelForm.reset()
 
     selectMetaInput = document.getElementById('shortcut-select-meta')
     selectLetterInput = document.getElementById('shortcut-select-letter')
