@@ -10,7 +10,10 @@ stylus -c -u nib -o build keyboard-commander.styl
 cat gamifier/gamifier.js >> build/keyboard-commander.js
 cat keyboard-commander.js >> build/keyboard-commander.js
 
-cat levels/level-1.js levels/level-2.js levels/level-3.js levels/level-4.js levels/level-5.js levels/level-6.js levels/level-7.js levels/level-8.js levels/level-9.js levels/level-10.js >> build/keyboard-commander.js
+for file in ./levels/*.js
+do
+  cat $file >> build/keyboard-commander.js
+done
 
 uglifyjs --overwrite build/keyboard-commander.js
 
