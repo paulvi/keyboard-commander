@@ -23,6 +23,9 @@ var KeyboardCommander = (function () {
     window.addEventListener('focus', windowFocusHandler, false)
     window.addEventListener('mousemove', mouseMoveHandler, false)
 
+    shuffle(successMessages)
+    shuffle(failureMessages)
+
     document.getElementById('start-over-link').href = location.href
   }
 
@@ -44,45 +47,31 @@ var KeyboardCommander = (function () {
   }
 
   function levelSuccess () {
-    var randMessage = Math.round(Math.random() * (totalSuccessMessages - 1))
-
     Gamifier.pause()
 
-    for (var i = 0; i < totalSuccessMessages; i++) {
-      if (i == randMessage) {
-        successMessages[i].removeAttribute('hidden')
-      } else {
-        successMessages[i].setAttribute('hidden', true)
-      }
-    }
-
+    successMessages[0].removeAttribute('hidden')
     activeScreen.appendChild(levelSuccessScreen)
 
     screenTimeout = setTimeout(function () {
       clearTimeout(screenTimeout)
       inactiveScreens.appendChild(levelSuccessScreen)
+      successMessages[0].setAttribute('hidden', true)
+      successMessages[0].parentElement.appendChild(successMessages[0])
       Gamifier.nextLevel()
     }, 700)
   }
 
   function levelFailure () {
-    var randMessage = Math.round(Math.random() * (totalFailureMessages - 1))
-
     Gamifier.pause()
 
-    for (var i = 0; i < totalFailureMessages; i++) {
-      if (i == randMessage) {
-        failureMessages[i].removeAttribute('hidden')
-      } else {
-        failureMessages[i].setAttribute('hidden', true)
-      }
-    }
-
+    failureMessages[0].removeAttribute('hidden')
     activeScreen.appendChild(levelFailureScreen)
 
     screenTimeout = setTimeout(function () {
       clearTimeout(screenTimeout)
       inactiveScreens.appendChild(levelFailureScreen)
+      failureMessages[0].setAttribute('hidden', true)
+      failureMessages[0].parentElement.appendChild(failureMessages[0])
       Gamifier.resume()
     }, 700)
   }

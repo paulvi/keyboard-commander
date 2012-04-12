@@ -37,6 +37,7 @@
   <?php if (php_sapi_name() == 'cli') : ?>
   <script src="keyboard-commander.js"></script>
   <?php else : ?>
+  <script src="utils.js"></script>
   <script src="gamifier/gamifier.js"></script>
   <script src="keyboard-commander.js"></script>
   <script src="levels/level-01.js"></script>
