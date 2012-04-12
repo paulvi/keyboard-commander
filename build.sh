@@ -17,3 +17,5 @@ uglifyjs --overwrite build/keyboard-commander.js
 htmlcompressor --type html --remove-quotes --simple-bool-attr -o ./build/ ./build/
 
 cp -R images build/images
+cp humans.txt build/humans.txt
+cp robots.txt build/robots.txt
