@@ -2,8 +2,13 @@
 <html lang="en-ca">
 <head>
   <meta charset="utf-8">
-  <title>Keyboard Commander</title>
+  <title>Keyboard Commander · A small, fun, browser game to test your keyboard knowledge</title>
   <link rel="stylesheet" href="keyboard-commander.css">
+  <link rel="license" href="https://github.com/thomasjbradley/keyboard-commander/blob/master/NEW-BSD-LICENSE.txt">
+  <meta name="application-name" content="Keyboard Commander">
+  <meta name="description" content="A small, fun, browser game to test your knowledge of using the keyboard. No mice allowed.">
+  <meta name="author" content="Thomas J Bradley">
+  <link rel="author" href="http://thomasjbradley.ca">
 </head>
 <body>
 
