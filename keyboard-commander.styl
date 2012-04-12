@@ -33,9 +33,15 @@ a
 a:link
 a:visited
   border-bottom 0.1em solid #33f
+  outline none
 
   color #33f
   text-decoration none
+
+a:hover
+a:focus
+a:active
+  outline 2px solid #33f
 
 mark
   background-color #ffc
@@ -140,6 +146,8 @@ h2
   text-align right
 
 select
+  outline none
+
   font-size 16px
   vertical-align middle
 
@@ -150,9 +158,14 @@ input
   width 2em
 
   border 1px solid #ccc
+  outline none
 
   font normal 16px/1.5 "Helvetica Neue",Helvetica,Arial,sans-serif
   vertical-align middle
+
+input:focus
+select:focus
+  outline 2px solid #33f
 
 input[type="checkbox"]
 input[type="radio"]
@@ -166,9 +179,10 @@ button
   position relative
 
   background-color #19adb8
-  border 0
+  border 2px solid #19abb8
   border-radius 0.175em
   cursor pointer
+  outline none
 
   color #fff
   font 400 18px/1 "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -177,6 +191,7 @@ button:hover
 button:focus
   animation none
   background-color #1ecfdc
+  border-color #33f
 
 button:active
   top 1px
