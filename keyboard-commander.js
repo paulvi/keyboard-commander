@@ -9,6 +9,7 @@ var KeyboardCommander = (function () {
     , totalFailureMessages = failureMessages.length
     , screenTimeout = null
     , mouseMoved = false
+    , lastMousePos = {x : false, y : false}
 
   function startScreen () {
     document.getElementsByClassName('game-start')[0].addEventListener('click', function gameStartClick (ev) {
@@ -84,11 +85,22 @@ var KeyboardCommander = (function () {
     }, 700)
   }
 
-  function mouseMoveHandler () {
-    mouseMoved = true
+  function mouseMoveHandler (ev) {
+    if (lastMousePos.x === false || lastMousePos.y === false) {
+      lastMousePos.x = ev.clientX
+      lastMousePos.y = ev.clientY
+    }
+
+    if (lastMousePos.x != ev.clientX || lastMousePos.y != ev.clientY)
+      mouseMoved = true
+
+    lastMousePos.x = ev.clientX
+    lastMousePos.y = ev.clientY
   }
 
   function windowBlurHandler () {
+    lastMousePos.x = false
+    lastMousePos.y = false
     window.removeEventListener('mousemove', mouseMoveHandler)
   }
 
