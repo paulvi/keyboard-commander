@@ -54,7 +54,7 @@ var KeyboardCommander = (function () {
       clearTimeout(screenTimeout)
       inactiveScreens.appendChild(levelSuccessScreen)
       successMessages[0].setAttribute('hidden', true)
-      successMessages[0].parentElement.appendChild(successMessages[0])
+      successMessages[0].parentNode.appendChild(successMessages[0])
       Gamifier.nextLevel()
     }, 700)
   }
@@ -69,7 +69,7 @@ var KeyboardCommander = (function () {
       clearTimeout(screenTimeout)
       inactiveScreens.appendChild(levelFailureScreen)
       failureMessages[0].setAttribute('hidden', true)
-      failureMessages[0].parentElement.appendChild(failureMessages[0])
+      failureMessages[0].parentNode.appendChild(failureMessages[0])
       Gamifier.resume()
     }, 700)
   }
