@@ -4,6 +4,8 @@ var KeyboardCommander = (function () {
     , screenTimeout = null
     , mouseMoved = false
     , lastMousePos = {x : false, y : false}
+    , os = (navigator.platform.search(/mac/i) > -1) ? 'mac' : 'win'
+    , notOs = (os == 'win') ? 'mac' : 'win'
 
   function setUp () {
     window.addEventListener('blur', windowBlurHandler, false)
@@ -14,6 +16,11 @@ var KeyboardCommander = (function () {
     shuffle(document.getElementById(levelFailureScreen).getElementsByClassName('message'))
 
     document.getElementById('start-over-link').href = location.href
+    document.documentElement.className += 'os-' + os
+
+    toArray(document.getElementsByClassName(notOs)).forEach(function (elem, i, array) {
+      elem.parentNode.removeChild(elem)
+    })
   }
 
   function startScreen () {

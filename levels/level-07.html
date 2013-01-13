@@ -7,7 +7,8 @@
       <label for="shortcut-select-meta" data-state="invisible">Meta key</label>
       <select id="shortcut-select-meta">
         <option value="-"></option>
-        <option value="ctrl">Ctrl</option>
+        <option value="ctrl" class="win">Ctrl</option>
+        <option value="ctrl" class="mac">⌘</option>
         <option value="shift">Shift</option>
         <option value="alt">Alt</option>
       </select>
@@ -20,10 +21,11 @@
       <label for="shortcut-start-meta" data-state="invisible">Key</label>
       <select id="shortcut-start-meta">
         <option value="-"></option>
-        <option value="left">&larr;</option>
+        <option value="left">←</option>
         <option value="pgup">PgUp</option>
-        <option value="home">Home</option>
-        <option value="up">&uarr;</option>
+        <option value="home" class="win">Home</option>
+        <option value="home" class="mac">⌘←</option>
+        <option value="up">↑</option>
       </select>
     </div>
 
@@ -32,10 +34,11 @@
       <label for="shortcut-end-meta" data-state="invisible">Key</label>
       <select id="shortcut-end-meta">
         <option value="-"></option>
-        <option value="down">&darr;</option>
-        <option value="end">End</option>
+        <option value="down">↓</option>
+        <option value="end" class="win">End</option>
+        <option value="end" class="mac">⌘→</option>
         <option value="pgdn">PgDn</option>
-        <option value="right">&rarr;</option>
+        <option value="right">→</option>
       </select>
     </div>
 
@@ -44,7 +47,8 @@
       <label for="shortcut-next-meta" data-state="invisible">Meta key</label>
       <select id="shortcut-next-meta">
         <option value="-"></option>
-        <option value="ctrl">Ctrl</option>
+        <option value="ctrl" class="win">Ctrl</option>
+        <option value="ctrl" class="mac">⌘</option>
         <option value="shift">Shift</option>
         <option value="alt">Alt</option>
       </select>
@@ -52,8 +56,8 @@
       <select id="shortcut-next-letter">
         <option value="-"></option>
         <option value="home">Home</option>
-        <option value="up">&uarr;</option>
-        <option value="right">&rarr;</option>
+        <option value="up">↑</option>
+        <option value="right">→</option>
         <option value="pgup">PgUp</option>
       </select>
     </div>
@@ -63,16 +67,17 @@
       <label for="shortcut-prev-meta" data-state="invisible">Meta key</label>
       <select id="shortcut-prev-meta">
         <option value="-"></option>
-        <option value="ctrl">Ctrl</option>
+        <option value="ctrl" class="win">Ctrl</option>
+        <option value="ctrl" class="mac">⌘</option>
         <option value="shift">Shift</option>
         <option value="alt">Alt</option>
       </select>
       <label for="shortcut-prev-letter" data-state="invisible">Key</label>
       <select id="shortcut-prev-letter">
         <option value="-"></option>
-        <option value="left">&larr;</option>
+        <option value="left">←</option>
         <option value="pgdn">PgDn</option>
-        <option value="down">&darr;</option>
+        <option value="down">↓</option>
         <option value="end">End</option>
       </select>
     </div>
