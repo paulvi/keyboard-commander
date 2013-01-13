@@ -11,7 +11,7 @@
 
 /* SITE */
   Software:
-  - MacVim
+  - Sublime Text
   - Git
   - Stylus
   - UglifyJS
