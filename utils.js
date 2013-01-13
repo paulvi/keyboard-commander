@@ -29,3 +29,19 @@ function shuffle (elems) {
     elems[l].parentNode.removeChild(elems[l])
   }
 }
+
+/**
+ * Converts a DOM List to an array
+ * http://stackoverflow.com/questions/2735067/how-to-convert-a-dom-node-list-to-an-array-in-javascript
+ * @param {Object} obj
+ * @return {Array}
+ */
+function toArray (obj) {
+  var array = []
+  // iterate backwards ensuring that length is an UInt32
+  for (var i = obj.length >>> 0; i--;) {
+    array[i] = obj[i]
+  }
+
+  return array
+}
