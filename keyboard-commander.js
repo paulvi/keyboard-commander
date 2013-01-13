@@ -1,13 +1,20 @@
 var KeyboardCommander = (function () {
-  var activeScreen = document.getElementById('active-screen')
-    , inactiveScreens = document.getElementById('inactive-screens')
-    , levelSuccessScreen = document.getElementById('level-success')
-    , successMessages = levelSuccessScreen.getElementsByClassName('message')
-    , levelFailureScreen = document.getElementById('level-failure')
-    , failureMessages = levelFailureScreen.getElementsByClassName('message')
+  var levelSuccessScreen = 'level-success'
+    , levelFailureScreen = 'level-failure'
     , screenTimeout = null
     , mouseMoved = false
     , lastMousePos = {x : false, y : false}
+
+  function setUp () {
+    window.addEventListener('blur', windowBlurHandler, false)
+    window.addEventListener('focus', windowFocusHandler, false)
+    window.addEventListener('mousemove', mouseMoveHandler, false)
+
+    shuffle(document.getElementById(levelSuccessScreen).getElementsByClassName('message'))
+    shuffle(document.getElementById(levelFailureScreen).getElementsByClassName('message'))
+
+    document.getElementById('start-over-link').href = location.href
+  }
 
   function startScreen () {
     document.getElementsByClassName('game-start')[0].addEventListener('click', function gameStartClick (ev) {
@@ -16,16 +23,7 @@ var KeyboardCommander = (function () {
     }, false)
   }
 
-  function start () {
-    window.addEventListener('blur', windowBlurHandler, false)
-    window.addEventListener('focus', windowFocusHandler, false)
-    window.addEventListener('mousemove', mouseMoveHandler, false)
-
-    shuffle(successMessages)
-    shuffle(failureMessages)
-
-    document.getElementById('start-over-link').href = location.href
-  }
+  function start () {}
 
   function update () {
     var status = {status : 'continue'}
@@ -37,24 +35,25 @@ var KeyboardCommander = (function () {
   }
 
   function success () {
-    activeScreen.appendChild(document.getElementById('success'))
+    Gamifier.showScreen('success')
   }
 
   function failure () {
-    activeScreen.appendChild(document.getElementById('failure'))
+    Gamifier.showScreen('failure')
   }
 
   function levelSuccess () {
     Gamifier.pause()
 
-    successMessages[0].removeAttribute('hidden')
-    activeScreen.appendChild(levelSuccessScreen)
+    Gamifier.showScreen(levelSuccessScreen)
+    var successMessage = document.getElementById(levelSuccessScreen).getElementsByClassName('message')[0]
+    successMessage.removeAttribute('hidden')
 
     screenTimeout = setTimeout(function () {
       clearTimeout(screenTimeout)
-      inactiveScreens.appendChild(levelSuccessScreen)
-      successMessages[0].setAttribute('hidden', true)
-      successMessages[0].parentNode.appendChild(successMessages[0])
+      Gamifier.hideScreen(levelSuccessScreen)
+      successMessage.setAttribute('hidden', true)
+      successMessage.parentNode.appendChild(successMessage)
       Gamifier.nextLevel()
     }, 700)
   }
@@ -62,14 +61,15 @@ var KeyboardCommander = (function () {
   function levelFailure () {
     Gamifier.pause()
 
-    failureMessages[0].removeAttribute('hidden')
-    activeScreen.appendChild(levelFailureScreen)
+    Gamifier.showScreen(levelFailureScreen)
+    var failureMessage = document.getElementById(levelFailureScreen).getElementsByClassName('message')[0]
+    failureMessage.removeAttribute('hidden')
 
     screenTimeout = setTimeout(function () {
       clearTimeout(screenTimeout)
-      inactiveScreens.appendChild(levelFailureScreen)
-      failureMessages[0].setAttribute('hidden', true)
-      failureMessages[0].parentNode.appendChild(failureMessages[0])
+      Gamifier.hideScreen(levelFailureScreen)
+      failureMessage.setAttribute('hidden', true)
+      failureMessage.parentNode.appendChild(failureMessage)
       Gamifier.resume()
     }, 700)
   }
@@ -102,6 +102,7 @@ var KeyboardCommander = (function () {
 
   return {
     startScreen : startScreen
+    , setUp : setUp
     , start : start
     , update : update
     , success : success
