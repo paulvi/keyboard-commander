@@ -5,6 +5,7 @@ h1{margin:0 0 1em;font-size:4em;font-weight:100;line-height:1em}
 a,a:link,a:visited{border-bottom:.1em solid #33f;outline:none;color:#33f;text-decoration:none}
 a:focus{outline:2px solid #33f}
 mark{background-color:#ffc}
+.os-mac .win,.os-win .mac{display:none;visibility:hidden}
 .screen{margin:0 auto 0;padding:2em;width:35em;text-align:center}
 .level{padding-top:4em}
 .screen-cover{height:100%;left:0;padding:2em 0;position:absolute;top:0;width:100%;background-color:rgba(226,226,226,0.8)}

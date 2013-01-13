@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# rev 3
+# rev 4
 
 keyboard-commander.css
 keyboard-commander.js
@@ -7,3 +7,4 @@ keyboard-commander.js
 # Images
 images/keyboard.svg
 images/mouse.svg
+images/victory.svg
