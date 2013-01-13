@@ -7,6 +7,10 @@ php index.php > build/index.html
 
 stylus -c -u nib -o build keyboard-commander.styl
 
+svgo images/keyboard.svg
+svgo images/mouse.svg
+svgo images/victory.svg
+
 cat utils.js >> build/keyboard-commander.js
 cat gamifier/gamifier.js >> build/keyboard-commander.js
 cat keyboard-commander.js >> build/keyboard-commander.js
