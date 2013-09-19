@@ -11,7 +11,7 @@
 
 /* SITE */
   Software:
-  - Sublime Text
+  - Sublime Text (with Vintage Mode)
   - Git
   - Stylus
   - UglifyJS
